@@ -1,0 +1,165 @@
+@media (max-width: 375px) {
+  body {
+    padding-inline: 0em;
+  }
+
+  header {
+    padding-inline: 1em;
+  }
+
+  header .nav_menu,
+  header .btn {
+    display: none;
+  }
+
+  .toggle_menu {
+    display: block;
+    position: absolute;
+    left: 87%;
+    top: 38%;
+    width: 32px;
+    height: 18px;
+    border: 0;
+
+    background: url(images/icon-menu.svg);
+    cursor: pointer;
+    z-index: 999;
+  }
+
+  .toggle_menu[aria-expanded="true"] {
+    background: url(images/icon-menu-close.svg);
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 26px;
+  }
+
+  header .nav_menu {
+    display: block;
+    position: absolute;
+    top: 130%;
+    left: 8%;
+    width: fit-content;
+    height: fit-content;
+    background-color: var(--clr-100);
+    transform: translate(115%);
+    transition: transform 250ms ease-out;
+    padding: 1em 6em;
+    box-shadow: 3px 3px 30px #a09f9f;
+    border-radius: 0.3em;
+  }
+
+  header .nav_menu[data-visible="true"] {
+    transform: translate(0%);
+  }
+  header .nav_menu .nav_list {
+    flex-direction: column;
+    gap: 1.5em;
+    margin-right: 1em;
+  }
+
+  header .nav_menu .nav_list li {
+    color: var(--clr-700);
+    font-weight: var(--fw-bold);
+  }
+
+  .grid_container {
+    flex-direction: column;
+  }
+
+  .container {
+    margin-top: -7em;
+  }
+
+  .container img {
+    position: absolute;
+    top: -160%;
+    right: 1%;
+    width: 100%;
+    height: 200%;
+    object-fit: contain;
+  }
+
+  .easy_bank {
+    text-align: center;
+  }
+}
+
+
+
+@media (min-width: 376px) {
+  main {
+    position: relative;
+  }
+  main .bg_image img {
+    width: 60%;
+    top: -5%;
+    right: -15%;
+    position: absolute;
+  }
+
+  .container h1 {
+    width: 400px;
+    margin-right: 20em;
+    text-align: left;
+  }
+  .container p {
+    width: 450px;
+    margin-right: 43em;
+    text-align: left;
+  }
+  .container .btn {
+    margin-right: 58em;
+  }
+
+  .easy_bank {
+    padding-inline: 4em;
+  }
+
+  .easy_bank .heading h2 {
+    margin-right: 21.6em;
+  }
+  .easy_bank .heading p {
+    margin-right: 21.5em;
+    width: 400px;
+  }
+
+.grid_container .grid_items {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .flex_container h4 {
+    margin-right: 30em;
+  }
+
+  .flex_container .flex_group {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .flex_container .flex_group .grid_group_flow {
+    width: 300px;
+    height: fit-content;
+  }
+  .flex_container .flex_group .grid_group_flow p {
+    width: fit-content;
+  }
+  .flex_container .flex_group .grid_group_flow h4 {
+    line-height: 1.1;
+    margin-bottom: -2em;
+    width: 280px;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 4em;
+  }
+
+  footer .nav_menu .nav_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+  }
+}
